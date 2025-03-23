@@ -37,8 +37,11 @@ ViewScape is a geospatial application that analyzes what a user can see from a s
 # Navigate to project directory
 cd ViewScape
 
+# Upgrade Pip
+python3 -m pip install --upgrade pip
+
 # Create a virtual environment
-python -m venv venv
+python3 -m venv venv
 
 # Activate the virtual environment
 # On Windows:
