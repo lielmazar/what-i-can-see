@@ -6,10 +6,24 @@ This project is all about looking at the landscape from a view point and get inf
 3. draw the array in a printable from - probebly an image
 ## Develpoment Guidelines
 ### git
-1. Start with git pull the dev branch
+1. If you don't have a local repo, clone from remote using
    ```
-   git pull https://github.com/lielmazar/what-i-can-see.git dev
+   git clone https://github.com/lielmazar/what-i-can-see.git
    ```
-3. Submit pullrequest when wanting to merge with Dev branch.
-4. Main branch is source for deployement branch.
-5. 
+3. Pull the dev branch
+   ```
+   git pull origin dev
+   ```
+4. Create and work on 'dev-[developerName]' branch
+   ```
+   git checkout -b dev-lielmazar
+   ``` 
+6. Work, develop and commit a lot
+   ```
+   git add .
+   git commit
+   ```
+8. Push to remote repo when finished working
+   ```
+   git push origin feature-branch
+   ```
