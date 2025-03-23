@@ -6,9 +6,9 @@ This project is all about looking at the landscape from a view point and get inf
 3. draw the array in a printable from - probebly an image
 ## Develpoment Guidelines
 ### git
-1. start with git pull dev branch
+1. Start with git pull the dev branch
    ```
-   git pull 
+   git pull https://github.com/lielmazar/what-i-can-see.git dev
    ```
 3. Submit pullrequest when wanting to merge with Dev branch.
 4. Main branch is source for deployement branch.
