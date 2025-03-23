@@ -109,7 +109,86 @@ git push origin dev-[YourName]
 
 ## Technical Details
 
-[This section will be expanded with implementation specifics, algorithms used, and technical requirements]
+### Dependencies
+The project relies on the following Python packages (detailed in `requirements.txt`):
+- numpy - For numerical operations and array handling
+- matplotlib - For visualization and image generation
+- argparse - For command-line argument parsing
+- logging - For application logging
+- pathlib - For cross-platform file path handling
+- [Additional packages may be required for GIS data processing]
+
+### Core Components
+
+#### InputProcessor
+Responsible for handling and validating user input:
+- Processes GPS coordinates (latitude, longitude)
+- Handles additional height parameters
+- Calculates the appropriate map slice based on field-of-view angles
+- Returns a structured map slice object for further processing
+
+#### VisibilityAnalyzer
+Performs the core visibility calculations:
+- Fetches elevation data for the specified map slice
+- Implements line-of-sight algorithms to determine visible points
+- Generates a visibility grid (boolean matrix) indicating visible/non-visible areas
+- Handles various terrain scenarios and edge cases
+
+#### Visualizer
+Creates visual representations of the analysis results:
+- Renders terrain data with appropriate coloring and hillshading
+- Overlays visibility information on the terrain model
+- Produces high-quality output images for printing or display
+- Supports various output formats and customization options
+
+### Command-Line Interface
+The application provides a comprehensive CLI with the following parameters:
+- `--latitude`, `-lat`: Viewer's latitude in decimal degrees (required)
+- `--longitude`, `-lon`: Viewer's longitude in decimal degrees (required)
+- `--height`, `-ht`: Additional height above ground level in meters (default: 1.8m)
+- `--fov`, `-f`: Field of view in degrees (default: 120°)
+- `--output`, `-o`: Path to save the output visualization
+- `--verbose`, `-v`: Enable verbose logging
+
+### Project Structure
+```
+ViewScape/
+├── README.md
+├── requirements.txt
+├── main.py           # Entry point for the application
+├── src/              # Source code directory
+│   ├── __init__.py
+│   ├── input.py      # Advanced input processing
+│   ├── elevation.py  # Elevation data handling
+│   ├── visibility.py # Visibility calculation algorithms
+│   └── visualization.py # Visualization components
+├── tests/
+│   ├── __init__.py
+│   ├── test_input.py
+│   ├── test_elevation.py
+│   ├── test_visibility.py
+│   └── test_visualization.py
+├── data/             # Sample data and elevation models
+│   └── sample_dem/
+└── examples/
+    └── example_outputs/
+```
+
+### Algorithm Details
+
+#### Line-of-Sight Calculation
+The visibility analysis uses ray casting from the viewpoint to determine what terrain features are visible:
+1. The viewer position (latitude, longitude, height) serves as the origin point
+2. Rays are cast in the specified field-of-view
+3. For each ray, terrain elevation is sampled at regular intervals
+4. A point is considered visible if no previous point along the ray blocks the line of sight
+5. The algorithm accounts for Earth's curvature for large distances
+
+#### Visualization Techniques
+- Terrain is rendered using a digital elevation model with hillshading
+- Visible areas are highlighted with a semi-transparent green overlay
+- Contour lines can be added to represent elevation changes
+- Optional terrain feature labeling identifies prominent landmarks in view
 
 ## Contributing
 Contributions are welcome! Please follow the development workflow outlined above and adhere to the project's coding standards.
