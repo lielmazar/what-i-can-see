@@ -34,10 +34,10 @@ ViewScape is a geospatial application that analyzes what a user can see from a s
 #### Initial Repository Setup
 ```bash
 # Clone the repository
-git clone https://github.com/lielmazar/what-i-can-see.git
+git clone https://github.com/lielmazar/ViewScape.git
 
 # Navigate to project directory
-cd what-i-can-see
+cd ViewScape
 
 # Get the latest development branch
 git pull origin dev
@@ -52,7 +52,7 @@ git push origin dev-[YourName]
 #### Daily Development Workflow
 ```bash
 # Navigate to project directory
-cd what-i-can-see
+cd ViewScape
 
 # Switch to your development branch
 git checkout dev-[YourName]
