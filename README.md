@@ -1,29 +1,87 @@
-# Tentative Project Name: what-i-can-see
-This project is all about looking at the landscape from a view point and get information about what you see.
-## Program Work Flow
-1. Getting from user GPS coordinate, additional height and the desired slice of view in degrees -> resulting in a map slice
-2. Extract height data from a map along multiple GPS coordinate in the map slice, and calculate what the user can see  -> resulting in two dimanstional array point in the map which you can/cannot see)
-3. draw the array in a printable from - probebly an image
-## Develpoment Guidelines
-### git
-1. If you don't have a local repo, clone from remote using
-   ```
-   git clone https://github.com/lielmazar/what-i-can-see.git
-   ```
-3. Pull the dev branch
-   ```
-   git pull origin dev
-   ```
-4. Create and work on 'dev-[developerName]' branch
-   ```
-   git checkout -b dev-lielmazar
-   ``` 
-6. Work, develop and commit a lot
-   ```
-   git add .
-   git commit
-   ```
-8. Push to remote repo when finished working
-   ```
-   git push origin feature-branch
-   ```
+# ViewScape: Terrain Visibility Analyzer
+
+> **Note:** Project name tentative
+
+## Overview
+ViewScape is a geospatial application that analyzes what a user can see from a specific viewpoint. By processing GPS coordinates, elevation data, and field-of-view parameters, the application generates a visual representation of visible terrain features from the user's perspective.
+
+## Core Functionality
+
+1. **Input Processing**
+   - Collects user's GPS coordinates
+   - Takes additional height above ground level
+   - Accepts field-of-view parameters (viewing angle in degrees)
+   - Generates corresponding map slice for analysis
+
+2. **Visibility Analysis**
+   - Extracts elevation data from the map along multiple GPS coordinates
+   - Implements line-of-sight calculations to determine visible and non-visible points
+   - Outputs a two-dimensional visibility array (indicating points that are visible/non-visible)
+
+3. **Visualization**
+   - Renders the visibility data in a user-friendly format
+   - Generates printable graphics that illustrate visible landscape features
+   - Provides optional terrain labeling for identified visible landmarks
+
+## Development Setup
+
+### Prerequisites
+- Git
+- [Additional dependencies to be specified]
+
+### Git Workflow
+
+#### Initial Repository Setup
+```bash
+# Clone the repository
+git clone https://github.com/lielmazar/what-i-can-see.git
+
+# Navigate to project directory
+cd what-i-can-see
+
+# Get the latest development branch
+git pull origin dev
+
+# Create your personal development branch
+git checkout -b dev-[YourName]
+
+# Push your branch to remote
+git push origin dev-[YourName]
+```
+
+#### Daily Development Workflow
+```bash
+# Navigate to project directory
+cd what-i-can-see
+
+# Switch to your development branch
+git checkout dev-[YourName]
+
+# Pull latest changes from development branch
+git pull origin dev
+
+# [Work on your code changes]
+
+# Stage and commit your changes
+git add .
+git commit -m 'descriptive commit message'
+
+# Push changes to remote when ready
+git push origin dev-[YourName]
+```
+
+### Code Review Process
+1. When your feature is complete, create a Pull Request from your branch to `dev`
+2. Notify the repository owner (lielmazar) for review
+3. Address any feedback or requested changes
+4. Once approved, your code will be merged into the development branch
+
+## Technical Details
+
+[This section will be expanded with implementation specifics, algorithms used, and technical requirements]
+
+## Contributing
+Contributions are welcome! Please follow the development workflow outlined above and adhere to the project's coding standards.
+
+## License
+MIT
