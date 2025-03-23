@@ -52,6 +52,7 @@ pip install -r requirements.txt
 # If you add new dependencies, update requirements.txt
 pip freeze > requirements.txt
 ```
+Remember to commit and push if changing requirements.txt!
 
 ### Git Workflow
 
@@ -83,6 +84,9 @@ git checkout dev-[YourName]
 
 # Pull latest changes from development branch
 git pull origin dev
+
+# Best to be ensure all python dependencies are up to date
+pip install -r requirements.txt
 
 # [Work on your code changes]
 
