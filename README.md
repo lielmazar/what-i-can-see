@@ -27,7 +27,31 @@ ViewScape is a geospatial application that analyzes what a user can see from a s
 
 ### Prerequisites
 - Git
+- Python 3.8 or higher
+- pip (Python package installer)
 - [Additional dependencies to be specified]
+
+### Python Environment Setup
+
+```bash
+# Navigate to project directory
+cd ViewScape
+
+# Create a virtual environment
+python -m venv venv
+
+# Activate the virtual environment
+# On Windows:
+venv\Scripts\activate
+# On macOS/Linux:
+source venv/bin/activate
+
+# Install dependencies from requirements.txt
+pip install -r requirements.txt
+
+# If you add new dependencies, update requirements.txt
+pip freeze > requirements.txt
+```
 
 ### Git Workflow
 
