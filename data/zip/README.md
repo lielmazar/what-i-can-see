@@ -1,4 +1,4 @@
-source:
+SRTM:
 
 https://lpdaac.usgs.gov/documents/179/SRTM_User_Guide_V3.pdf
 
@@ -8,3 +8,14 @@ https://dwtkns.com/srtm30m/
 
 lielmazar
 L***8*******!
+
+
+------------------------------------------------
+ALOS:
+
+https://www.eorc.jaxa.jp/ALOS/en/dataset/aw3d30/data/aw3d30v4.1_product_e_1.0.pdf
+
+https://www.eorc.jaxa.jp/ALOS/en/aw3d30/data/index.htm
+
+ID: **********@gmail.com
+Password: aw3d30
