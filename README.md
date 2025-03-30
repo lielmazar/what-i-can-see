@@ -150,6 +150,8 @@ The application provides a comprehensive CLI with the following parameters:
 - `--output`, `-o`: Path to save the output visualization
 - `--verbose`, `-v`: Enable verbose logging
 
+test it with "python3 main.py -lat 47.6062 -lon -122.3321 -ht 2.0 -f 120 -o visibility_map.png"
+
 ### Project Structure
 ```
 ViewScape/
@@ -158,20 +160,19 @@ ViewScape/
 ├── main.py           # Entry point for the application
 ├── src/              # Source code directory
 │   ├── __init__.py
-│   ├── input.py      # Advanced input processing
-│   ├── elevation.py  # Elevation data handling
-│   ├── visibility.py # Visibility calculation algorithms
-│   └── visualization.py # Visualization components
+│   ├── InputProcessor.py      # Advanced input processing
+│   ├── Elevation.py  # Elevation data handling
+│   ├── VisibilityAnalyzer.py # Visibility calculation algorithms
+│   └── Visualizer.py # Visualization components
 ├── tests/
 │   ├── __init__.py
-│   ├── test_input.py
-│   ├── test_elevation.py
-│   ├── test_visibility.py
-│   └── test_visualization.py
+│   ├── test_InputProcessor.py
+│   ├── test_Elevation.py
+│   ├── test_VisibilityAnalyzer.py
+│   └── test_Visualizer.py
 ├── data/             # Sample data and elevation models
 │   └── sample_dem/
-└── examples/
-    └── example_outputs/
+└── outputs/
 ```
 
 ### Algorithm Details
