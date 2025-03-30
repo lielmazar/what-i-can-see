@@ -130,6 +130,7 @@ Responsible for handling and validating user input:
 #### VisibilityAnalyzer
 Performs the core visibility calculations:
 - Fetches elevation data for the specified map slice
+   - data source: https://lpdaac.usgs.gov/documents/179/SRTM_User_Guide_V3.pdf
 - Implements line-of-sight algorithms to determine visible points
 - Generates a visibility grid (boolean matrix) indicating visible/non-visible areas
 - Handles various terrain scenarios and edge cases
