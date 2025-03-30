@@ -150,7 +150,10 @@ The application provides a comprehensive CLI with the following parameters:
 - `--output`, `-o`: Path to save the output visualization
 - `--verbose`, `-v`: Enable verbose logging
 
-test it with "python3 main.py -lat 47.6062 -lon -122.3321 -ht 2.0 -f 120 -o visibility_map.png"
+test it with 
+```
+"python3 main.py -lat 47.6062 -lon -122.3321 -ht 2.0 -f 120 -o visibility_map.png"
+```
 
 ### Project Structure
 ```
