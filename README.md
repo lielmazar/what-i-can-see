@@ -152,7 +152,7 @@ The application provides a comprehensive CLI with the following parameters:
 
 test it with 
 ```
-"python3 main.py -lat 47.6062 -lon -122.3321 -ht 2.0 -f 120 -o visibility_map.png"
+python3 main.py -lat 47.6062 -lon -122.3321 -ht 2.0 -f 120 -o visibility_map.png
 ```
 
 ### Project Structure
