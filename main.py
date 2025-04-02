@@ -14,7 +14,6 @@ import logging
 import sys
 
 from src.InputProcessor import InputProcessor
-#from src.Elevation import ElevationService
 from src.VisibilityAnalyzer import VisibilityAnalyzer
 from src.Visualizer import Visualizer
 
@@ -32,26 +31,33 @@ def parse_arguments():
     parser = argparse.ArgumentParser(
         description='ViewScape: Analyze what you can see from a specific viewpoint'
     )
-    
+
     parser.add_argument(
         '--latitude', '-lat',
         type=float,
-        required=True,
-        help='Viewer\'s latitude in decimal degrees'
+        default=32.81046788058522, 
+        help='Viewer\'s latitude in decimal degrees (default: 32.81046788058522)'
     )
     
     parser.add_argument(
         '--longitude', '-lon',
         type=float,
-        required=True,
-        help='Viewer\'s longitude in decimal degrees'
+        default=34.991779716554284,
+        help='Viewer\'s longitude in decimal degrees (default: 34.991779716554284)'
     )
     
     parser.add_argument(
+        '--azimuth', '-az',
+        type=float,
+        default=0.0,
+        help='Viewer\'s viewing azimuth in degrees (0° = North, 90° = East, default: 0°)'
+    )
+
+    parser.add_argument(
         '--height', '-ht',
         type=float,
-        default=1.8,
-        help='Additional height above ground level in meters (default: 1.8m)'
+        default=40.0,
+        help='Additional height above ground level in meters (default: 40.0m)'
     )
     
     parser.add_argument(
@@ -63,6 +69,7 @@ def parse_arguments():
     
     parser.add_argument(
         '--output', '-o',
+        default='output.png',
         type=str,
         help='Path to save the output visualization'
     )
@@ -91,6 +98,7 @@ def main():
     map_slice = input_processor.process_coordinates(
         args.latitude,
         args.longitude,
+        args.azimuth,
         args.height,
         args.fov
     )

@@ -144,16 +144,17 @@ Creates visual representations of the analysis results:
 
 ### Command-Line Interface
 The application provides a comprehensive CLI with the following parameters:
-- `--latitude`, `-lat`: Viewer's latitude in decimal degrees (required)
-- `--longitude`, `-lon`: Viewer's longitude in decimal degrees (required)
-- `--height`, `-ht`: Additional height above ground level in meters (default: 1.8m)
+- `--latitude`, `-lat`: Viewer's latitude in decimal degrees (default: 32.81046788058522)
+- `--longitude`, `-lon`: Viewer's longitude in decimal degrees (default: 34.991779716554284)
+- `--azimuth`, `-az`: Viewer's viewing azimuth in degrees (0° = North, 90° = East, default: 0°)
+- `--height`, `-ht`: Additional height above ground level in meters (default: 40.0m)
 - `--fov`, `-f`: Field of view in degrees (default: 120°)
 - `--output`, `-o`: Path to save the output visualization
 - `--verbose`, `-v`: Enable verbose logging
 
 test it with 
 ```
-python3 main.py -lat 47.6062 -lon -122.3321 -ht 2.0 -f 120 -o visibility_map.png
+python3 main.py --verbose
 ```
 
 ### Project Structure
@@ -165,13 +166,11 @@ ViewScape/
 ├── src/              # Source code directory
 │   ├── __init__.py
 │   ├── InputProcessor.py      # Advanced input processing
-│   ├── Elevation.py  # Elevation data handling
 │   ├── VisibilityAnalyzer.py # Visibility calculation algorithms
 │   └── Visualizer.py # Visualization components
 ├── tests/
 │   ├── __init__.py
 │   ├── test_InputProcessor.py
-│   ├── test_Elevation.py
 │   ├── test_VisibilityAnalyzer.py
 │   └── test_Visualizer.py
 ├── data/             # Sample data and elevation models

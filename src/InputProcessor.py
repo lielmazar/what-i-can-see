@@ -20,20 +20,21 @@ class InputProcessor:
     def __init__(self):
         logger.info("Initializing InputProcessor")
         
-    def process_coordinates(self, latitude, longitude, height, fov_degrees):
+    def process_coordinates(self, latitude, longitude, azimuth, height, fov_degrees):
         """
         Process the input GPS coordinates and view parameters.
         
         Args:
             latitude (float): Viewer's latitude in decimal degrees
             longitude (float): Viewer's longitude in decimal degrees
+            zimuth (float): Viewer's azimuth in degrees
             height (float): Additional height above ground level in meters
             fov_degrees (float): Field of view in degrees
             
         Returns:
             dict: A dictionary containing the map slice parameters
         """
-        logger.info(f"Processing coordinates: Lat {latitude}, Lon {longitude}, "
+        logger.info(f"Processing coordinates: Lat {latitude}, Lon {longitude}, Azimuth {azimuth}°, "
                    f"Height {height}m, FOV {fov_degrees}°")
         
         # This is a placeholder - actual implementation would calculate
