@@ -58,7 +58,7 @@ pip freeze > requirements.txt
 Remember to commit and push if changing requirements.txt!
 
 ### Git Workflow
-
+Ask the repository owner (lielmazar) for push access
 #### Initial Repository Setup
 ```bash
 # Clone the repository
